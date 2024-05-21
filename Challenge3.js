@@ -4,23 +4,40 @@ class Car{
         this.make = make
         this.speed = speed
     }
-    //The accelerate method that adds 10 the speed and logs it.
+    //Cleaned up the accelerate method that adds 10 the speed and logs it.
     accelerate(){
         this.speed = this.speed + 10
-        console.log(`the new speed is ${this.speed}`)
+        console.log(`The ${this.make} sped up to ${this.speed}km/h`)
     }
-    //The Accelerate method that decreases speed by 5 and logs it.
+    //Cleaned up the Accelerate method that decreases speed by 5 and logs it.
     brake(){
         this.speed = this.speed - 5
-        console.log(`the speed after braking is ${this.speed}`)
+        console.log(`The ${this.make} slowed down to ${this.speed}km/h`)
     }
 }
-//Testing the class by using the sample object.
+//Testing the class and fufuiling the requirements by using the provided object data.
 let Car1 = new Car("BMW",120);
-console.log(Car1.make)
-console.log(Car1.speed)
+let Car2 = new Car("Mercedes",95)
+//Cleaned up this introduction and made both 'make' and 'speed' appear on the same line
+console.log('The first car is a', Car1.make, 'that starts at',Car1.speed,'km/h')
+console.log('The second car is a', Car2.make, 'that starts at',Car2.speed,'km/h')
+//Racing Time BABY!
+Car1.accelerate()
+Car2.accelerate()
+Car2.accelerate()
+Car1.accelerate()
 Car1.accelerate()
 Car1.brake()
-//Testing to make sure I implemented the method: it should add 10 and then decrease 5 from the new speed that the two above lines inplemented.
+Car2.accelerate()
 Car1.accelerate()
 Car1.brake()
+Car1.brake()
+Car2.brake()
+Car1.brake()
+Car2.accelerate()
+Car1.brake()
+Car2.brake()
+Car1.brake()
+Car2.brake()
+Car2.brake()
+//And it looks like the BMW stayed at the highest speed for longer so it wins!
